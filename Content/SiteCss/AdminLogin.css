@@ -1,0 +1,79 @@
+﻿body {
+}
+
+article {
+    margin: 150px 0 80px 0;
+}
+
+.logincont {
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+    list-style-type: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    border: solid 0.1px;
+    border-color: gray;
+}
+
+.loginstyle1 {
+    margin: 30px 0px 60px 0px;
+}
+
+.loginstyle2 {
+    margin: 30px 0px;
+}
+
+.loginstyle3 {
+    margin: 30px 0px;
+}
+
+.loginstyle4 {
+    margin: 30px 0px 30px 0px;
+    height: 100px;
+}
+
+.H2login {
+    margin: 0 auto 0 auto;
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    background-color: black;
+    color: whitesmoke;
+}
+
+.tooltip {
+    font-size: 20px;
+    text-align: left;
+    position: absolute;
+    margin-left: 390px;
+    margin-top: 10px;
+    color: red;
+}
+
+.Tblogin {
+    padding-left: 10px;
+    height: 40px;
+    width: 240px;
+    border-radius: 5px;
+}
+
+.fcont {
+    margin-top: 10px;
+}
+
+.Lfail {
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+.BtnBlue {
+    margin-top: 20px;
+    font-size: 20px;
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    background-color: #2E80FB;
+    color: whitesmoke;
+    border: 0;
+}

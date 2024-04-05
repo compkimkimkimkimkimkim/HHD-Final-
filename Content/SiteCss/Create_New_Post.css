@@ -1,0 +1,142 @@
+﻿.content {
+    width: 1000px;
+    margin: 100px auto;
+    border: 1px solid #000;
+    background-color: white;
+    padding: 20px;
+}
+
+
+.title {
+    border-bottom: 1px solid #000;
+}
+
+input {
+    height: 30px;
+    margin-top: 30px;
+}
+
+.txbtitle {
+    width: 100%;
+}
+
+.category {
+    width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.category_item {
+    width: 100px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 15px;
+    padding: 10px 5px;
+    text-align: center;
+    white-space: normal;
+}
+
+.selected {
+    background-color: #FFADAD;
+}
+
+textarea {
+    width: 100%;
+    height: 400px;
+    resize: none;
+}
+
+.pictures {
+    display: flex;
+    flex-direction: row;
+}
+
+.pictures_left {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choose {
+    margin: 10px 20px;
+}
+
+.input_file {
+    display: none;
+}
+
+.choose.have-image {
+    width: 300px;
+    border: 1px solid #000;
+    padding: 30px;
+    position: relative;
+}
+
+.btn {
+    border: 1px solid #000;
+    font-size: 13px;
+    border-radius: 2px;
+    background-color: #EFEFEF;
+    padding: 2px 4px;
+}
+
+.choosebtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image_preview {
+    width: 100%;
+    height: auto;
+}
+
+.choosed {
+    border: 1px solid #000;
+}
+
+.password {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.password_tip {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.bottom_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btn_cancel {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    margin-left: 80px;
+    border: 1px solid #000;
+    background-color: #666666;
+    color: white;
+}
+
+.btn_post {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    margin-left: 80px;
+    border: 1px solid #000;
+    background-color: #2E80FB;
+    color: white;
+}

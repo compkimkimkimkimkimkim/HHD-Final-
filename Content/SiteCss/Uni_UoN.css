@@ -1,0 +1,229 @@
+﻿article {
+    margin: 80px 0px 100px 0px;
+    min-width: 1000px;
+}
+
+.page h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner .message {
+        position: absolute;
+        background: #ADADFF;
+        opacity: 0.9;
+        width: 45%;
+        height: 50%;
+        left: 50%;
+        bottom: 25%;
+    }
+
+.message h1 {
+    font-size: 2.3vw;
+    font-weight: bold;
+}
+
+.message p {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 1vw 5vw 0 5vw;
+}
+
+.overview {
+    margin: 100px auto;
+}
+
+    .overview .title {
+        margin: 0 0 100px 0;
+        text-align: center;
+    }
+        .overview .title .line {
+            border-top: 5px solid #2E80FB;
+            width: 500px;
+            margin: 40px auto;
+        }
+    .overview .content {
+        background: #D9D9D9;
+        padding: 0 50px;
+    }
+
+        .overview .content .inner {
+            display: flex;
+            flex-direction: row;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+            .overview .content .inner .left {
+                width: 600px;
+                flex: 1;
+            }
+
+                .overview .content .inner .left img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+            .overview .content .inner .right {
+                border: solid 1px;
+                width: 600px;
+                text-align: justify;
+                flex: 1;
+                background-color: white;
+            }
+
+
+                .overview .content .inner .right p {
+                    font-size: 19px;
+                    margin: 80px;
+                }
+
+.performance {
+    margin: 200px auto;
+}
+
+    .performance .top {
+        background: #DDD;
+        padding: 80px 20px;
+    }
+
+        .performance .top h2 {
+            text-align: center;
+            font-family: Inder, system-ui;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .performance .top .line {
+            border-top: 5px solid #2E80FB;
+            width: 500px;
+            margin: 40px auto;
+        }
+
+        .performance .top .content {
+            margin: 0 auto;
+            font-size: 20px;
+            width: 900px;
+            color: #666;
+            text-align: center;
+            font-family: Inder, system-ui;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            min-width: 600px;
+        }
+
+    .performance .bottom {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+        .performance .bottom .item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            height: 250px;
+            text-align: justify;
+        }
+
+            .performance .bottom .item h3 {
+                color: #2E80FB;
+                font-family: Inder, system-ui;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: bold;
+            }
+
+            .performance .bottom .item img {
+                width: 84px;
+                height: 84px;
+            }
+
+            .performance .bottom .item .content {
+                font-size: 20px;
+                text-align: center;
+            }
+
+.school-logo {
+    width: 1000px;
+    margin: 200px auto;
+    padding: 0 100px;
+}
+
+    .school-logo img {
+        width: 100%;
+        border: 1px solid black;
+    }
+
+.chancellor-message {
+    width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+    .chancellor-message h1 {
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .chancellor-message .line-wrap {
+        padding: 0 100px;
+    }
+
+    .chancellor-message .line {
+        border-top: 5px solid #2E80FB;
+        margin: 40px 0;
+        font-family: Inder, system-ui;
+        font-size: 30px;
+    }
+
+    .chancellor-message .light {
+        font-size: 20px;
+        color: #666;
+        font-family: Inder, system-ui;
+        margin-bottom: 50px;
+        text-align: justify;
+    }
+
+.message-cont {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.chancellor-message .sign {
+    margin-top: 50px;
+}
+
+    .chancellor-message .sign img {
+        width: 100%;
+    }
+
+.imgcont {
+    width: 300px;
+    height: 200px;
+}
+
+    .imgcont img {
+        max-width: 100%;
+        height: auto;
+    }

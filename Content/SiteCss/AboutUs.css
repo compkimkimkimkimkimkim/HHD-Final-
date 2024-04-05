@@ -1,0 +1,98 @@
+﻿article {
+    margin-top: 80px;
+    min-width: 1000px;
+    margin-bottom: 100px;
+}
+
+.imgcont {
+    max-width: 100%;
+    height: auto
+}
+
+    .imgcont img {
+        width: 100%;
+    }
+
+
+.conttitle {
+    width: 1000px;
+    background-color: white;
+    border: black solid 1px;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+    .conttitle label {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+.membercont {
+    margin-top: 100px;
+    background-color: #DDDDDD;
+    border-top: black solid 1px;
+    border-bottom: black solid 1px;
+}
+
+.memberbox {
+    width: 1000px;
+    background-color: white;
+    border: black solid 1px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    min-height: 300px;
+}
+
+.memberimg {
+    margin: 50px;
+    height: 200px;
+}
+
+    .memberimg img {
+        height: 100%;
+    }
+
+.memberinfo {
+    margin: 20px 50px 50px 50px;
+}
+
+.toolcont {
+    margin-top: 100px;
+    background-color: #DDDDDD;
+    border-top: black solid 1px;
+    border-bottom: black solid 1px;
+}
+
+.toolbox {
+    width: 800px;
+    background-color: white;
+    border: black solid 1px;
+    margin: 50px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+.toolinfo {
+    margin:20px 0;
+    width:200px;
+}
+
+.toolimg {
+    margin: 0 auto;
+    width: 100px;
+}
+
+    .toolimg img {
+        width: 100%;
+    }
+
+.toolname {
+    text-align: center;
+}
+
+    .toolname label {
+        font-size: 20px;
+    }

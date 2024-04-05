@@ -1,0 +1,89 @@
+﻿body {
+    background-color: #dddddd;
+}
+
+article {
+    margin-top: 200px;
+    min-width: 1000px;
+    margin-bottom: 100px;
+}
+
+.title {
+    width: 1000px;
+    background-color: white;
+    border: black solid 1px;
+    margin: 50px auto;
+    padding: 20px 10px 50px 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+    .title h1 {
+        font-size: 36px;
+    }
+
+    .title span {
+        font-size: 24px;
+    }
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.nav_content {
+    width: 200px;
+    text-align: center;
+    margin: 0 100px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid;
+}
+
+    .nav_content label {
+        font-size: 20px;
+    }
+
+    .nav_content:hover {
+        cursor: pointer;
+        background-color: #2E80FB;
+    }
+
+.btn_active {
+    background-color: #2E80FB;
+}
+
+    .btn_active label {
+        color: whitesmoke;
+    }
+
+.hrr {
+    border: 2px solid black;
+    margin: 40px auto;
+}
+
+.TbFAQ {
+    display: none;
+}
+
+.box {
+    width: 1000px;
+    background-color: white;
+    border: black solid 1px;
+    margin: 50px auto;
+    display: flex;
+    min-height: 300px;
+}
+
+.boximg {
+    margin: 50px;
+    height: 200px;
+}
+
+    .boximg img {
+        height: 100%;
+    }
+
+.boxinfo {
+    margin: 20px 50px 50px 50px;
+}

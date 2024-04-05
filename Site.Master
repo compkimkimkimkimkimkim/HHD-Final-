@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HHD.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="Content/SiteCss/SiteMaster.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <nav>
+            <div class="navleft">
+                <a class="navcontmain" href="Home.aspx">
+                    <asp:Image CssClass="navimage" runat="server" ImageUrl="~/UserInterfaceLayer.Site/ImagesSite/uon horse.png" />
+                </a>
+            </div>
+            <div class="navright">
+                <div class="navlink9">
+                    <div class="navcont">
+                        <asp:HyperLink CssClass="navlink" runat="server">Campus Life</asp:HyperLink>
+                    </div>
+                    <div class="dropdown">
+                        <div class="droplist">
+                            <a class="sublink" href="CL_Location.aspx">Location</a>
+                            <a class="sublink" href="CL_MarinaSquare.aspx">Marina Square</a>
+                            <a class="sublink" href="CL_Event.aspx">School Event</a>
+                            <a class="sublink" href="CL_StudentClub.aspx">Student Club</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navlink9">
+                    <div class="navcont">
+                        <asp:HyperLink CssClass="navlink" runat="server">Uni Info</asp:HyperLink>
+                    </div>
+                    <div class="dropdown">
+                        <div class="droplist">
+                            <a class="sublink" href="Uni_PSB.aspx">About PSB</a>
+                            <a class="sublink" href="Uni_UoN.aspx">About UoN</a>
+                            <a class="sublink" href="Uni_Orientation.aspx">Orientation Page</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navcont">
+                    <asp:HyperLink CssClass="navlink" runat="server" NavigateUrl="~/UserInterfaceLayer.Site/AboutUs.aspx">About Us</asp:HyperLink>
+                </div>
+                <div class="navcont">
+                    <asp:HyperLink CssClass="navlink" runat="server" NavigateUrl="~/UserInterfaceLayer.Site/Community.aspx">Community</asp:HyperLink>
+                </div>
+                <div class="navcont">
+                    <asp:HyperLink CssClass="navlink" runat="server" NavigateUrl="~/UserInterfaceLayer.Site/AdminLogin.aspx">Admin Login</asp:HyperLink>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer>
+                <div>
+                    <a>This Website is made by team HHD</a>
+                </div>
+            </footer>
+        </div>
+    </form>
+
+
+
+
+
+</body>
+<script src="Scripts/SiteJs/SiteMaster.js"></script>
+</html>

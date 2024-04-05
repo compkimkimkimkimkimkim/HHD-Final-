@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{052285E3-092A-4AE3-8F36-83D49DC28EBB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HHD</RootNamespace>
+    <AssemblyName>HHD</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44333</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\hhd.mdf" />
+    <Content Include="App_Data\hhd_log.ldf">
+      <DependentUpon>hhd.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\CMSCss\CMSMaster.css" />
+    <Content Include="Content\CMSCss\CommunityCMS.css" />
+    <Content Include="Content\CMSCss\Create_New_Post.css" />
+    <Content Include="Content\CMSCss\SiteCMS.css" />
+    <Content Include="Content\SiteCss\AboutUs.css" />
+    <Content Include="Content\SiteCss\AdminLogin.css" />
+    <Content Include="Content\SiteCss\CL_Event.css" />
+    <Content Include="Content\SiteCss\CL_Location.css" />
+    <Content Include="Content\SiteCss\CL_MarinaSquare.css" />
+    <Content Include="Content\SiteCss\CL_StudentClub.css" />
+    <Content Include="Content\SiteCss\Community.css" />
+    <Content Include="Content\SiteCss\Create_New_Post.css" />
+    <Content Include="Content\SiteCss\Home.css" />
+    <Content Include="Content\SiteCss\SiteMaster.css" />
+    <Content Include="Content\SiteCss\Uni_Orientation.css" />
+    <Content Include="Content\SiteCss\Uni_PSB.css" />
+    <Content Include="Content\SiteCss\Uni_UoN.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\CMSJs\CMSmaster.js" />
+    <Content Include="Scripts\CMSJs\Community.js" />
+    <Content Include="Scripts\CMSJs\CommunityCMS.js" />
+    <Content Include="Scripts\CMSJs\Create_New_Post.js" />
+    <Content Include="Scripts\SiteJs\AboutUs.js" />
+    <Content Include="Scripts\SiteJs\AdminLogin.js" />
+    <Content Include="Scripts\SiteJs\CL_Event.js" />
+    <Content Include="Scripts\SiteJs\CL_Location.js" />
+    <Content Include="Scripts\SiteJs\CL_MarinaSquare.js" />
+    <Content Include="Scripts\SiteJs\CL_StudentClub.js" />
+    <Content Include="Scripts\SiteJs\Community.js" />
+    <Content Include="Scripts\SiteJs\Create_New_Post.js" />
+    <Content Include="Scripts\SiteJs\Home.js" />
+    <Content Include="Scripts\SiteJs\SiteMaster.js" />
+    <Content Include="Scripts\SiteJs\Uni_Orientation.js" />
+    <Content Include="Scripts\SiteJs\Uni_PSB.js" />
+    <Content Include="Scripts\SiteJs\Uni_UoN.js" />
+    <Content Include="Site.Master" />
+    <Content Include="UserInterfaceLayer.CMS\AboutUsCMS.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\CommunityCMS.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\Edit.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\Editaboutus.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\Editaboutus2.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\EditCommunity.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\EditCommunityPicture.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\EditEventList.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\EditHome.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\EditHome2.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\EditHome3.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\EditHome4.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\Editlocation2.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\EditLocation3.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\Editorentation.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\EditPSB.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\EditRulerComunity.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\Edit_All.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\EventCMS.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\HomeCMS.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\LocationCMS.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\MarinaSquareCMS.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\OrientationCMS.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\PSBCMS.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\StudentClubCMS.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\StudentClubEdit.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\UoNCMS.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\editmaria.aspx" />
+    <Content Include="UserInterfaceLayer.CMS\UONEdit.aspx" />
+    <Content Include="UserInterfaceLayer.Site\AboutUs.aspx" />
+    <Content Include="UserInterfaceLayer.Site\AdminLogin.aspx" />
+    <Content Include="UserInterfaceLayer.Site\CL_Event.aspx" />
+    <Content Include="UserInterfaceLayer.Site\CL_Location.aspx" />
+    <Content Include="UserInterfaceLayer.Site\CL_MarinaSquare.aspx" />
+    <Content Include="UserInterfaceLayer.Site\CL_StudentClub.aspx" />
+    <Content Include="UserInterfaceLayer.Site\Community.aspx" />
+    <Content Include="UserInterfaceLayer.Site\Create_New_Post.aspx" />
+    <Content Include="UserInterfaceLayer.Site\Home.aspx" />
+    <Content Include="UserInterfaceLayer.Site\ImagesCommunity\3ccd0e02a1f814caa4de2b6a3fc49ad0 %281%29.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesCommunity\4fb5a779c205479ed96fd4257be761eb.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesCommunity\6224a93a77911577baca0d6dc315e7c3.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesCommunity\a566bd44778d9e81e354813136e96bef.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesCommunity\e4dce34cfa798a9c9f0c431b9ee16418.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesCommunity\f9986e96bd91821397994e6ed567e356.jpeg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesCommunity\kfwPJieZVwI.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\365 JUICES BAR.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\7 Eleven.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\aboutustitle.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\about_ms.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\ACE.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\asana.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\aspnet.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\ASTON Steak &amp; Salad.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Australia.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\A_Live House by Relax.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Bangkok Jam.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Betsubara.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Beyond Pancakes.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\BHC chicken.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Burger King.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Bus.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Cambridge.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Canberra.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Carls Jr.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Cellarbation.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\CHIC-A-BOO chicken specialty.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\CHICHA San Chen.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\city-campus.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Club-Chinese-Student.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Club-Global-Student.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Club-Google.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Club-IES.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Club-IET.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Club-Indonesian.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Club-IPRS.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Club-Leadership-Development.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Club-Main.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Club-South-Asian.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Club-Vietnamese-Student.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Coco Veggie Nyonya Cusine.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\COLLINS.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Community Ad1.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Community Ad2.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Community Admin.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Community Comment.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Community User.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Conventry.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\dalkomm COFFEE.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Dian Xiao Er.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\discord.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\doanimg.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\doanimg1.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\drawio.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Earth.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Eccellente by HAO mart.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\ECU.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Edinburgh.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Encik Tan.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Evt-Culinary-Appreciation.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Evt-Emergency-Preparedness.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Evt-Godzilla.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Evt-Influencing-Other.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Evt-Main.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Evt-Matic-Festival.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Evt-Problem-Solving.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Evt-Stem-Career Fair.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\figma.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Gloria jeans coffees.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Gourmet Paradise.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Gyo-kaku Japanese BBQ restaurant.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Haidilao hotpot.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Hans.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Hertfordshire.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\home1.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\home2.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Hongkong Zhai Dimsum.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Jia he xing.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Jia Xiang Sarawak Kolo Mee.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\juntaoimg.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Kai Garden.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Kanada-ya.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Kei Kaisendon.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\KEITAKU.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Kenny Roger Roasters.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\kimimg.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Kith Cafe.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\krisimg.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\krisimg1.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\La Coffee.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\La Trobe.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\lao Huo Tang.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Logo.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\logout.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Luckin Coffee.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ma Mere Boulangeria.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Mades A Cafe.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\main img navi.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\MAKAN MAKAN by DPENTETZ GROUP.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Malts.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Map Navi.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Map_of_Marina_Square.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Massey.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\McDonalds.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Minhimg.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\MRT.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\msexcel.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Newcastle.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Nottingham.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\ntc.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\OH MY COWI.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\OJBK- Oyster Joint, Bar and Kitchen.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Olive Vine.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Orange &amp; Teal.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img1.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img10.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img11.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img12.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img13.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img2.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img3.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img4.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img5.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img6.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img7.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img8.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Ori_img9.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Pizza Hut.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Principal_Sign.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\PSB.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\PSB_Banner.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Psb_banner1.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\PSB_Effort.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\PSB_Overview.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\PUTIEN.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Rolling rice.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Saizeriya.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Seoul Garden.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Shang Pin Hotpot.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Shine Korea Supermarket.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\slideshow1.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\slideshow2.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\slideshow3.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\SOFRA Turkish cafe &amp; restaurant.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Starbucks Coffee.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\student_club.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Suki- Ya %28shabu shabu hotpot%29.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\SUKIYA.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\SUSHI-GO.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\TANAMERA COFFEE.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Tenkaichi Japanese BBQ.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\The Tree Cafe.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\The Vermilion House.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\thoimg.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\trello.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\uon horse.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\UONwhite.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\UON_Banner.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\UON_Overview.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\uon_overviwe1.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Victoria Bakery &amp; Cafe.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\vos.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\vs2022.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\YaKun Kaya Toast.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Yechun Xiao Jiang Nan.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\Yi Zun noodle.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\yirenimg.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\yirenimg1.jpg" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\yirenimg2.png" />
+    <Content Include="UserInterfaceLayer.Site\ImagesSite\ZUYA VEGETARIAN.png" />
+    <Content Include="UserInterfaceLayer.Site\Uni_Orientation.aspx" />
+    <Content Include="UserInterfaceLayer.Site\Uni_PSB.aspx" />
+    <Content Include="UserInterfaceLayer.Site\Uni_UoN.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BusinessLogicLayer\AboutUsBLL.cs" />
+    <Compile Include="BusinessLogicLayer\CategoryBLL.cs" />
+    <Compile Include="BusinessLogicLayer\EventListsBLL.cs" />
+    <Compile Include="BusinessLogicLayer\CommunityBLL.cs" />
+    <Compile Include="BusinessLogicLayer\CommunityCategoryBLL.cs" />
+    <Compile Include="BusinessLogicLayer\CommunityCollectionBLL.cs" />
+    <Compile Include="BusinessLogicLayer\CommunityCommentBLL.cs" />
+    <Compile Include="BusinessLogicLayer\CommunityPictureBLL.cs" />
+    <Compile Include="BusinessLogicLayer\HomeBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LocaltionBLL.cs" />
+    <Compile Include="BusinessLogicLayer\MarianSquareBLL.cs" />
+    <Compile Include="BusinessLogicLayer\OrientationBLL.cs" />
+    <Compile Include="BusinessLogicLayer\PSBCBLL.cs" />
+    <Compile Include="BusinessLogicLayer\StudentClubBLL.cs" />
+    <Compile Include="BusinessLogicLayer\UONBLL.cs" />
+    <Compile Include="CMS.Master.cs">
+      <DependentUpon>CMS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS.Master.designer.cs">
+      <DependentUpon>CMS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Constant\AboutUsConstant.cs" />
+    <Compile Include="Constant\EventListsConstant.cs" />
+    <Compile Include="Constant\HomeConstant.cs" />
+    <Compile Include="Constant\LocalTionConstant.cs" />
+    <Compile Include="Constant\MarianSquareConstant.cs" />
+    <Compile Include="Constant\OrientationConstant.cs" />
+    <Compile Include="Constant\PSBCConstant.cs" />
+    <Compile Include="Constant\StudentClubConstant.cs" />
+    <Compile Include="Constant\UoNConstant.cs" />
+    <Compile Include="DataAccessLayer\AboutUsDAL.cs" />
+    <Compile Include="DataAccessLayer\CategoryDAL.cs" />
+    <Compile Include="DataAccessLayer\CommunityCategoryDAL.cs" />
+    <Compile Include="DataAccessLayer\CommunityCollectionDAL.cs" />
+    <Compile Include="DataAccessLayer\CommunityCommentDAL.cs" />
+    <Compile Include="DataAccessLayer\CommunityDAL.cs" />
+    <Compile Include="DataAccessLayer\CommunityPictureDAL.cs" />
+    <Compile Include="DataAccessLayer\EventListDAL.cs" />
+    <Compile Include="DataAccessLayer\HomeDAL.cs" />
+    <Compile Include="DataAccessLayer\LocalTionDAL.cs" />
+    <Compile Include="DataAccessLayer\MarianSquareDAL.cs" />
+    <Compile Include="DataAccessLayer\OrientationDAL.cs" />
+    <Compile Include="DataAccessLayer\PSBCDAL.cs" />
+    <Compile Include="DataAccessLayer\SqlHelper.cs" />
+    <Compile Include="DataAccessLayer\StudentDAL.cs" />
+    <Compile Include="DataAccessLayer\UONDAL.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AboutUs.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Community.cs" />
+    <Compile Include="Models\CommunityCategory.cs" />
+    <Compile Include="Models\CommunityCollection.cs" />
+    <Compile Include="Models\CommunityComment.cs" />
+    <Compile Include="Models\CommunityPicture.cs" />
+    <Compile Include="Models\EventLists.cs" />
+    <Compile Include="Models\Home.cs" />
+    <Compile Include="Models\LocalTion.cs" />
+    <Compile Include="Models\MarianSquare.cs" />
+    <Compile Include="Models\Orientation.cs" />
+    <Compile Include="Models\PSBC.cs" />
+    <Compile Include="Models\StudentClub.cs" />
+    <Compile Include="Models\UoN.cs" />
+    <Compile Include="Model\AboutU.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Community.cs" />
+    <Compile Include="Model\CommunityCategory.cs" />
+    <Compile Include="Model\CommunityCollection.cs" />
+    <Compile Include="Model\CommunityComment.cs" />
+    <Compile Include="Model\CommunityPicture.cs" />
+    <Compile Include="Model\DbBase.cs" />
+    <Compile Include="Model\EventList.cs" />
+    <Compile Include="Model\Home.cs" />
+    <Compile Include="Model\LevelMary.cs" />
+    <Compile Include="Model\Localtion.cs" />
+    <Compile Include="Model\ManagerCommunity.cs" />
+    <Compile Include="Model\Orientation.cs" />
+    <Compile Include="Model\PSBC.cs" />
+    <Compile Include="Model\StudentClub.cs" />
+    <Compile Include="Model\TitleImage.cs" />
+    <Compile Include="Model\UoN.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\AboutUsCMS.aspx.cs">
+      <DependentUpon>AboutUsCMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\AboutUsCMS.aspx.designer.cs">
+      <DependentUpon>AboutUsCMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\CommunityCMS.aspx.cs">
+      <DependentUpon>CommunityCMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\CommunityCMS.aspx.designer.cs">
+      <DependentUpon>CommunityCMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Editaboutus.aspx.cs">
+      <DependentUpon>Editaboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Editaboutus.aspx.designer.cs">
+      <DependentUpon>Editaboutus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Editaboutus2.aspx.cs">
+      <DependentUpon>Editaboutus2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Editaboutus2.aspx.designer.cs">
+      <DependentUpon>Editaboutus2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditCommunity.aspx.cs">
+      <DependentUpon>EditCommunity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditCommunity.aspx.designer.cs">
+      <DependentUpon>EditCommunity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditCommunityPicture.aspx.cs">
+      <DependentUpon>EditCommunityPicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditCommunityPicture.aspx.designer.cs">
+      <DependentUpon>EditCommunityPicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditEventList.aspx.cs">
+      <DependentUpon>EditEventList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditEventList.aspx.designer.cs">
+      <DependentUpon>EditEventList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditHome.aspx.cs">
+      <DependentUpon>EditHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditHome.aspx.designer.cs">
+      <DependentUpon>EditHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditHome2.aspx.cs">
+      <DependentUpon>EditHome2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditHome2.aspx.designer.cs">
+      <DependentUpon>EditHome2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditHome3.aspx.cs">
+      <DependentUpon>EditHome3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditHome3.aspx.designer.cs">
+      <DependentUpon>EditHome3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditHome4.aspx.cs">
+      <DependentUpon>EditHome4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditHome4.aspx.designer.cs">
+      <DependentUpon>EditHome4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Editlocation2.aspx.cs">
+      <DependentUpon>Editlocation2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Editlocation2.aspx.designer.cs">
+      <DependentUpon>Editlocation2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditLocation3.aspx.cs">
+      <DependentUpon>EditLocation3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditLocation3.aspx.designer.cs">
+      <DependentUpon>EditLocation3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Editorentation.aspx.cs">
+      <DependentUpon>Editorentation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Editorentation.aspx.designer.cs">
+      <DependentUpon>Editorentation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditPSB.aspx.cs">
+      <DependentUpon>EditPSB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditPSB.aspx.designer.cs">
+      <DependentUpon>EditPSB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditRulerComunity.aspx.cs">
+      <DependentUpon>EditRulerComunity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EditRulerComunity.aspx.designer.cs">
+      <DependentUpon>EditRulerComunity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Edit_All.aspx.cs">
+      <DependentUpon>Edit_All.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\Edit_All.aspx.designer.cs">
+      <DependentUpon>Edit_All.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EventCMS.aspx.cs">
+      <DependentUpon>EventCMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\EventCMS.aspx.designer.cs">
+      <DependentUpon>EventCMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\HomeCMS.aspx.cs">
+      <DependentUpon>HomeCMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\HomeCMS.aspx.designer.cs">
+      <DependentUpon>HomeCMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\LocationCMS.aspx.cs">
+      <DependentUpon>LocationCMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\LocationCMS.aspx.designer.cs">
+      <DependentUpon>LocationCMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\MarinaSquareCMS.aspx.cs">
+      <DependentUpon>MarinaSquareCMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\MarinaSquareCMS.aspx.designer.cs">
+      <DependentUpon>MarinaSquareCMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\OrientationCMS.aspx.cs">
+      <DependentUpon>OrientationCMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\OrientationCMS.aspx.designer.cs">
+      <DependentUpon>OrientationCMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\PSBCMS.aspx.cs">
+      <DependentUpon>PSBCMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\PSBCMS.aspx.designer.cs">
+      <DependentUpon>PSBCMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\StudentClubCMS.aspx.cs">
+      <DependentUpon>StudentClubCMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\StudentClubCMS.aspx.designer.cs">
+      <DependentUpon>StudentClubCMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\StudentClubEdit.aspx.cs">
+      <DependentUpon>StudentClubEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\StudentClubEdit.aspx.designer.cs">
+      <DependentUpon>StudentClubEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\UoNCMS.aspx.cs">
+      <DependentUpon>UoNCMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\UoNCMS.aspx.designer.cs">
+      <DependentUpon>UoNCMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\editmaria.aspx.cs">
+      <DependentUpon>editmaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\editmaria.aspx.designer.cs">
+      <DependentUpon>editmaria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\UONEdit.aspx.cs">
+      <DependentUpon>UONEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.CMS\UONEdit.aspx.designer.cs">
+      <DependentUpon>UONEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\CL_Event.aspx.cs">
+      <DependentUpon>CL_Event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\CL_Event.aspx.designer.cs">
+      <DependentUpon>CL_Event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\CL_Location.aspx.cs">
+      <DependentUpon>CL_Location.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\CL_Location.aspx.designer.cs">
+      <DependentUpon>CL_Location.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\CL_MarinaSquare.aspx.cs">
+      <DependentUpon>CL_MarinaSquare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\CL_MarinaSquare.aspx.designer.cs">
+      <DependentUpon>CL_MarinaSquare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\CL_StudentClub.aspx.cs">
+      <DependentUpon>CL_StudentClub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\CL_StudentClub.aspx.designer.cs">
+      <DependentUpon>CL_StudentClub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Community.aspx.cs">
+      <DependentUpon>Community.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Community.aspx.designer.cs">
+      <DependentUpon>Community.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Create_New_Post.aspx.cs">
+      <DependentUpon>Create_New_Post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Create_New_Post.aspx.designer.cs">
+      <DependentUpon>Create_New_Post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Uni_Orientation.aspx.cs">
+      <DependentUpon>Uni_Orientation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Uni_Orientation.aspx.designer.cs">
+      <DependentUpon>Uni_Orientation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Uni_PSB.aspx.cs">
+      <DependentUpon>Uni_PSB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Uni_PSB.aspx.designer.cs">
+      <DependentUpon>Uni_PSB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Uni_UoN.aspx.cs">
+      <DependentUpon>Uni_UoN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer.Site\Uni_UoN.aspx.designer.cs">
+      <DependentUpon>Uni_UoN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="CMS.Master" />
+    <Content Include="DataAccessLayer\ViewPage1.cshtml" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\HHD20240404213501 - Web Deploy.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62590</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44333/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

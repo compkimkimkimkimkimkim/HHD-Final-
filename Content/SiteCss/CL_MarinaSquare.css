@@ -1,0 +1,114 @@
+﻿article {
+    margin: 80px 0px 100px 0px;
+}
+
+.banner {
+    max-width: 100%;
+    height: auto;
+}
+
+    .banner img {
+        width: 100%;
+    }
+
+.content {
+    min-width: 500px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.btnpart {
+    margin: 100px auto;
+    width: 1000px;
+}
+
+.btn_LTM {
+    display: flex;
+}
+
+.BTL {
+    text-align: center;
+    width: 150px;
+    border: solid 1px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: white;
+    margin: 20px;
+}
+
+.BTM {
+    text-align: center;
+    width: 150px;
+    border: solid 1px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #FFADAD;
+    margin: 20px;
+}
+
+.Bcont {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.lbpart {
+    margin-top: 70px;
+}
+
+.lbl1 {
+    font-size: 30px;
+}
+
+.Underline {
+    border: solid 1px;
+    width: 80%;
+    max-width: 1500px;
+}
+
+.store-map {
+    font-size: 36px;
+}
+
+.restaurant-list-heading {
+    padding-left: 150px;
+    font-size: 50px;
+    font-weight: bold;
+}
+/*To comment line: Crtl K, Crtl C*/
+/*To uncomment line: Crtl K, Crtl U*/
+
+.restaurant-list {
+    padding: 50px 100px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+}
+
+.restaurant-level {
+    margin: 30px;
+    min-width: 250px;
+}
+
+.restaurant {
+    margin: 0 auto;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+    .logo img {
+        width: 100%;
+    }
+
+.restaurant-name {
+    margin-top: 10px;
+    text-align: center;
+    width: 150px;
+}
+
+    .restaurant-name label {
+        font-size: 15px;
+    }

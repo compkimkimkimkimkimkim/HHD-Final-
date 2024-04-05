@@ -1,0 +1,388 @@
+﻿a {
+    color: #000000;
+    text-decoration: none;
+}
+
+article {
+    margin-top: 180px;
+    min-width: 1000px;
+}
+
+.cel {
+    width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+    font-size: 60px;
+    color: #000000;
+    line-height: 70px;
+}
+
+.slideshow {
+    width: 1000px;
+    margin: 50px auto;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow-container {
+    display: flex;
+    width: 200%;
+    height: auto;
+}
+
+.slide {
+    flex: 0 0 50%;
+}
+/*
+    .slide a {
+        display: flex;
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }*/
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    border: 1px solid #000;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 44px;
+    padding: 0 15px 0 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+.prev {
+    left: 0px;
+}
+
+.next {
+    right: 0px;
+}
+
+
+.wsc {
+    width: 1200px;
+    margin: 150px auto 0 auto;
+    border: 1px solid #000;
+    background-color: #DDDDDD;
+}
+
+    .wsc h3 {
+        height: 60px;
+        font-size: 2em;
+        padding: 0 150px;
+        line-height: 60px;
+        position: relative;
+    }
+
+        .wsc h3::after {
+            content: "";
+            position: absolute;
+            left: 220px;
+            bottom: -2px;
+            width: 25%;
+            height: 2px;
+            background-color: black;
+        }
+
+.image-gallery {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.image-item {
+    border: solid 1px;
+    position: relative;
+    width: 30%;
+    max-height: 250px;
+}
+
+    .image-item img {
+        width: 100%;
+        height: 100%;
+    }
+
+.image-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    padding: 5px;
+    font-size: 33px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.ou {
+    width: 1200px;
+    margin: 150px auto;
+    background-color: #DDDDDD;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.ou-left {
+    width: 100%;
+}
+
+.ou-right {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ou-right-left {
+    position: relative;
+    top: -50px;
+    width: 35%;
+    height: 400px;
+    background-color: #adadff;
+    border-radius: 5px;
+    border: solid 1px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ou-right-right {
+    position: relative;
+    top: -50px;
+    left: 5%;
+    width: 35%;
+    height: 400px;
+    background-color: #ffadad;
+    border-radius: 5px;
+    border: solid 1px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ou-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .ou-left h3 {
+        height: 60px;
+        font-size: 2em;
+        padding: 0 150px;
+        line-height: 60px;
+        position: relative;
+    }
+
+        .ou-left h3::after {
+            content: "";
+            position: absolute;
+            left: 200px;
+            bottom: -2px;
+            width: 25%;
+            height: 2px;
+            background-color: black;
+        }
+
+    .ou-left p {
+        width: 60%;
+        font-size: 19px;
+    }
+
+.ou-left-mtop {
+    margin-top: 30px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .ou-left-mtop p {
+        width: auto;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+
+.mtopbtn {
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+.ou-right h4 {
+    height: 20px;
+    font-size: 20px;
+}
+
+.ou-right h3 {
+    height: 40px;
+    font-size: 1.8em;
+    line-height: 40px;
+}
+
+.ou-right-left, .ou-right-right {
+    padding: 10px;
+}
+
+.unicont {
+    height: auto;
+}
+
+.uniname {
+    margin-top: 30px;
+    height: 100px;
+}
+
+    .uniname label {
+        font-weight: bold;
+        font-size: 23px;
+    }
+
+#noname {
+    color: #FFADAD;
+}
+
+.uniname h3 {
+    margin: 0px;
+    font-size: 33px;
+}
+
+.unicont p {
+    font-size: 17px;
+}
+
+.learn_more {
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border: solid 1px;
+}
+
+.ou-right a {
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 5px 20px;
+}
+
+.cwf {
+    width: 1200px;
+    margin: 150px auto;
+    background-color: #DDDDDD;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+}
+
+.cwf-left {
+    width: 100%;
+}
+
+.cwf-right {
+    width: 100%;
+}
+
+.cwf-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cwf-left-main {
+    width: 110%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-left: 30%;
+    background-color: #fff;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.cwf-left h3 {
+    height: 50px;
+    font-size: 2em;
+    line-height: 50px;
+    position: relative;
+}
+
+    .cwf-left h3::after {
+        content: "";
+        position: absolute;
+        left: 100px;
+        bottom: -2px;
+        width: 60%;
+        height: 2px;
+        background-color: black;
+    }
+
+.cwf-left p {
+    width: 50%;
+    font-size: 17px;
+}
+
+.mtopbtn2 {
+    margin: 15px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 20px;
+    padding: 15px 20px;
+}
+
+
+.cwf-right img {
+    padding: 30px 30px 30px 0;
+    width: calc(100% - 30px);
+    height: calc(100%  - 60px);
+}
+
+.reviewcon {
+    text-align: center;
+    background-color: #DDDDDD;
+    padding: 10px;
+}
+
+.reviewh1 {
+    width: 950px;
+    background-color: whitesmoke;
+    margin: 20px auto;
+    border: solid black 1px;
+}
+
+.reviewtext {
+    font-size: 30px;
+    color: black;
+}
+
+.reviewvideo {
+    display: flex;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.review {
+    padding: 0 20px;
+    height: 500px;
+}

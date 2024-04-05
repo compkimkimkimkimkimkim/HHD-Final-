@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CMS.master.cs" Inherits="HHD.CMS" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="Content/CMSCss/CMSMaster.css" />
+    <script src="../Scripts/CMSJs/CMSmaster.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav>
+            <div class="sideimg">
+                <asp:Image runat="server" ImageUrl="~/UserInterfaceLayer.Site/ImagesSite/UONwhite.png" />
+            </div>
+            <div class="logout">
+                <asp:HyperLink CssClass="logouttext" runat="server" NavigateUrl="~/UserInterfaceLayer.Site/Home.aspx">Log Out</asp:HyperLink>
+                <div class="logoutimg">
+                    <asp:Image runat="server" ImageUrl="~/UserInterfaceLayer.Site/ImagesSite/logout.png" />
+                </div>
+            </div>
+            <a href="HomeCMS.aspx" class="sidetext">HOME</a>
+            <hr />
+            <asp:Button runat="server" CssClass="sidebtn" Text="Campus Life        &#9660;" OnClick="FuncCam"></asp:Button>
+            <div runat="server" id="Cam">
+                <a href="LocationCMS.aspx" class="sidetext"> - Location</a>
+                <a href="MarinaSquareCMS.aspx" class="sidetext"> - Marina Square</a>
+                <a href="EventCMS.aspx" class="sidetext"> - Event list</a>
+                <a href="StudentClubCMS.aspx" class="sidetext"> - Student Club</a>
+            </div>
+            <hr />
+            <asp:Button runat="server" CssClass="sidebtn" Text="Uni Info                &#9660;" OnClick="FuncUni"></asp:Button>
+            <div runat="server" id="Uni">
+                <a href="PSBCMS.aspx" class="sidetext"> - About PSB</a>
+                <a href="UoNCMS.aspx" class="sidetext"> - About UoN</a>
+                <a href="OrientationCMS.aspx" class="sidetext"> - Orientation</a>
+            </div>
+            <hr />
+            <a href="AboutUsCMS.aspx" class="sidetext">About Us</a>
+            <hr />
+            <a href="CommunityCMS.aspx" class="sidetext">Community</a>
+            <hr />
+        </nav>
+        <section>
+            <label class="secname" id="PageLabel" runat="server">Admim CMS Page</label>
+            <asp:Button runat="server" class="sectext" onclick="openModal" Text="See Preview"></asp:Button>
+        </section>
+        <div id="myModal" class="modal" runat="server">
+            <div class="modal-content">
+                <asp:Button runat="server" class="close" onclick="closeModal" Text="X"></asp:Button>
+                <iframe runat="server" id="previewFrame" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div class="container-body">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
